@@ -57,8 +57,7 @@ dev = [
 where = ["src"]
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "tests.settings"
-pythonpath = ["src"]
+pythonpath = ["src", "tests"]
 
 [tool.ruff]
 target-version = "py39"

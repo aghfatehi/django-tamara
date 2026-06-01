@@ -7,4 +7,4 @@ for p in [_root, os.path.join(_root, "src")]:
     if p not in sys.path:
         sys.path.insert(0, p)
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tests.settings")
+os.environ["DJANGO_SETTINGS_MODULE"] = "tests.settings"
