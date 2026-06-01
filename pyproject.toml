@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=67.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aghfatehi-django-tamara"
+version = "1.0.0"
+description = "Tamara Payment Gateway Integration for Django - Buy Now Pay Later (BNPL) solution supporting Saudi Arabia, UAE, Kuwait, Bahrain, Qatar, and Oman."
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "django", "tamara", "payment", "gateway", "bnpl",
+    "installments", "saudi-arabia", "uae",
+]
+authors = [
+    {name = "AL-AGHBARI Fatehi", email = "fathi.a.n2002@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "Django>=4.2",
+    "requests>=2.31",
+]
+
+[project.urls]
+homepage = "https://github.com/aghfatehi/django-tamara"
+repository = "https://github.com/aghfatehi/django-tamara"
+issues = "https://github.com/aghfatehi/django-tamara/issues"
+changelog = "https://github.com/aghfatehi/django-tamara/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-django>=4.5",
+    "responses>=0.25",
+    "ruff>=0.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+pythonpath = ["src", "tests"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]

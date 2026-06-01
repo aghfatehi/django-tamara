@@ -1,0 +1,77 @@
+<form class="form-horizontal" action="{{ update_route|default:'#' }}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="payment_method" value="tamara">
+
+    <div class="form-group row">
+        <div class="col-md-4">
+            <label class="col-form-label">Sandbox Mode</label>
+        </div>
+        <div class="col-md-8">
+            <label class="switch">
+                <input type="checkbox" name="TAMARA_SANDBOX_MODE"{% if tamara_settings.SANDBOX %} checked{% endif %}>
+                <span class="slider round"></span>
+            </label>
+            <span class="text-muted fs-12">Enable for testing</span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-4">
+            <label class="col-form-label">Tamara API Token</label>
+        </div>
+        <div class="col-md-8">
+            <input type="text" class="form-control" name="TAMARA_API_TOKEN"
+                value="{{ tamara_settings.API_TOKEN }}"
+                placeholder="Enter Tamara API Token" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-4">
+            <label class="col-form-label">Country Code</label>
+        </div>
+        <div class="col-md-8">
+            <select class="form-control" name="TAMARA_COUNTRY_CODE">
+                {% for code, name in countries.items %}
+                    <option value="{{ code }}"{% if tamara_settings.COUNTRY_CODE == code %} selected{% endif %}>
+                        {{ name }} ({{ code }})
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-4">
+            <label class="col-form-label">Currency</label>
+        </div>
+        <div class="col-md-8">
+            <select class="form-control" name="TAMARA_CURRENCY">
+                {% for code, name in currencies.items %}
+                    <option value="{{ code }}"{% if tamara_settings.CURRENCY == code %} selected{% endif %}>
+                        {{ name }} ({{ code }})
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-4">
+            <label class="col-form-label">Number of Instalments</label>
+        </div>
+        <div class="col-md-8">
+            <select class="form-control" name="TAMARA_INSTALMENTS">
+                {% for num in instalments_options %}
+                    <option value="{{ num }}"{% if tamara_settings.INSTALMENTS == num %} selected{% endif %}>
+                        {{ num }} Instalments
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group mb-0 text-right">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>
