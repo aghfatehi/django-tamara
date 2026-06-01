@@ -1,7 +1,7 @@
 # Django Tamara Payment Gateway
 
 [![PyPI Version](https://img.shields.io/pypi/v/aghfatehi-django-tamara?label=PyPI&color=blue)](https://pypi.org/project/aghfatehi-django-tamara/)
-[![Django](https://img.shields.io/badge/Django-4.2%20|%205.0%20|%205.1-green.svg)](https://www.djangoproject.com/)
+[![Django](https://img.shields.io/badge/Django-4.2%20|%205.0%20|%205.1%20|%205.2%20|%206.0-green.svg)](https://www.djangoproject.com/)
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/github/license/aghfatehi/django-tamara)](LICENSE)
 
