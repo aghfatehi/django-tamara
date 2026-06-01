@@ -261,4 +261,3 @@ This package is open-sourced software licensed under the [MIT license](LICENSE).
 | Bahrain       | BH   | Dinar    | BHD  |
 | Qatar         | QA   | Riyal    | QAR  |
 | Oman          | OM   | Riyal    | OMR  |
-"# django-tamara" 
