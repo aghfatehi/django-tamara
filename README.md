@@ -28,9 +28,11 @@ A professional Django package for integrating [Tamara](https://tamara.co) - the 
 
 | Django  | Python | Package Version |
 |---------|--------|-----------------|
-| 4.2.x   | 3.9+   | ^1.0            |
-| 5.0.x   | 3.10+  | ^1.0            |
-| 5.1.x   | 3.10+  | ^1.0            |
+| 4.2.x   | 3.9+   | ^2.0            |
+| 5.0.x   | 3.10+  | ^2.0            |
+| 5.1.x   | 3.10+  | ^2.0            |
+| 5.2.x   | 3.10+  | ^2.0            |
+| 6.0.x   | 3.12+  | ^2.0            |
 
 ## Installation
 
